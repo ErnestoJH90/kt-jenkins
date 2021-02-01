@@ -3,15 +3,15 @@ pipeline{
 	stages{
 	stage('ejecutando en el master'){
 		steps{
-			sh 'ip addr show'
+			bat 'ip addr show'
 		}
 	}
 	stage('ejecutando en el agente'){
 		agent{
-			label 'docker'
+			label 'localhost:8080'
 		}
 		steps{
-			sh 'ip addr show'
+			bat 'ip addr show'
 		}
 	}
 		
