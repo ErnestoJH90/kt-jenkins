@@ -3,7 +3,7 @@ pipeline{
 	stages{
 	stage('ejecutando en el master'){
 		steps{
-			bat 'ipconfig addr show'
+			bat 'ipconfig '
 		}
 	}
 	stage('ejecutando en el agente'){
@@ -11,7 +11,7 @@ pipeline{
 			label 'localhost:8080'
 		}
 		steps{
-			bat 'ipconfig addr show'
+			bat 'ipconfig '
 		}
 	}
 		
