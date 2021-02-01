@@ -3,7 +3,7 @@ pipeline{
 	stages{
 	stage('ejecutando en el master'){
 		steps{
-			sh 'ip addr show'
+			bat 'ip addr show'
 		}
 	}
 	stage('ejecutando en el agente'){
