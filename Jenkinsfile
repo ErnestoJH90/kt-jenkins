@@ -1,25 +1,17 @@
 pipeline{
 	agent any
 	stages{
-	stage('ejecutando en el Segunda'){
+	stage('ejecutando en el master'){
 		steps{
-			bat'ip addr show'
+			sh 'ip addr show'
 		}
 	}
 	stage('ejecutando en el agente'){
 		agent{
-			label 'windows'
+			label 'docker'
 		}
 		steps{
-			bat 'ip addr show'
-		}
-	}
-	stage('solo ejecutar en tercera'){
-		when{
-		    expression { env.BRANCH_NAME == "Tercera"}
-		}
-		steps{
-			bat'cat filecillo'
+			sh 'ip addr show'
 		}
 	}
 		
