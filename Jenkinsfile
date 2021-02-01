@@ -8,12 +8,12 @@ pipeline{
 	}
 	stage('ejecutando en el agente'){
 		agent{
-			label 'docker'
+			label 'Docker'
 		}
 		steps{
 			sh 'ip addr show'
 		}
 	}
-    
+
 	}
 }
