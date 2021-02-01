@@ -8,10 +8,10 @@ pipeline{
 	}
 	stage('ejecutando en el agente'){
 		agent{
-			label 'localhost:8080'
+			label 'docker'
 		}
 		steps{
-			bat 'ipconfig '
+			sh 'ip addr show'
 		}
 	}
 		
