@@ -1,14 +1,14 @@
 pipeline{
 	agent any
 	stages{
-	stage('ejecutando en el master'){
+	stage('ejecutando en el Segunda'){
 		steps{
-			bat 'ip addr show'
+			sh 'ip addr show'
 		}
 	}
 	stage('ejecutando en el agente'){
 		agent{
-			label 'Docker'
+			label 'docker'
 		}
 		steps{
 			sh 'ip addr show'
