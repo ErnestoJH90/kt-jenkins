@@ -8,15 +8,15 @@ pipeline{
 	}
 	stage('ejecutando en el agente'){
 		agent{
-			label 'docker'
+			label 'Docker'
 		}
 		steps{
 			sh 'ip addr show'
 		}
 	}
-	stage('solo ejecutar en segunda'){
+	stage('solo ejecutar en tercera'){
 		when{
-		    expression { env.BRANCH_NAME == "segunda"}
+		    expression { env.BRANCH_NAME == "Tercera"}
 		}
 		steps{
 			sh 'cat filecillo'
