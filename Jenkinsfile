@@ -3,7 +3,7 @@ pipeline{
 	stages{
 	stage('ejecutando en el master'){
 		steps{
-			bat 'ipconfig '
+			sh 'ip addr show'
 		}
 	}
 	stage('ejecutando en el agente'){
